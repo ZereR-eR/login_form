@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=44w03cikqwlK0DXPNW8b-oR795D2lOdF9vj7ULu_PiV6wuu8j500JsMDV3-eXQlgQ6_9EuFZOh1EwHNIIWBBFRX6fHUX9AS8XnNQczr4TkimKNusDzY51w8sKMCSBoEXfJIL9mw96s1KSL0bBvzEY-nShUtiE10ekr3YKr0wKLtf1h288H6t04x5jOJkkovVdshAqwtlF6fwc4Cy0DF73eX-k03vKhuPYXEZvbGoK-4" charset="UTF-8"></script><style type="text/css">
+			*{
+				font-family: 'Ubuntu', sans-serif;
+				color: #5d5d5a;
+			}
+			body{
+				background-color: #ffa45c;
+				/*box-sizing: border-box;*/
+			}
+			.login-form{
+				width: 350px;
+				border:2px solid #ffcdab;
+				padding: 30px 20px;
+				/*box-sizing: border-box;*/
+				border-radius: 10px;
+				margin: 200px auto;
+			}
+			.form-input{
+				margin-bottom: 10px;
+				/*box-sizing: border-box;*/
+			}
+			.form-input label{
+				display: block;
+				margin-bottom: 10px;
+			}
+			.form-input input{
+				display: block;
+				width: 100%;
+				border-radius: 10px;
+				padding:10px 15px;
+				border:2px solid #ffcdab;
+				background-color: #fff4e3;
+				box-sizing: border-box;
+			}
+			.btn{
+
+				border-radius: 10px;
+				padding:10px 15px;
+				border:2px solid #5d5d5a;
+				background-color: #5d5d5a;
+				color:#fff4e3;
+				margin-right: 10px;
+				/*text-align: center;*/
+
+			}
+			.reg-link{
+
+			}
+			.text-light{
+
+				color:#fff4e3;
+			}
+			.login-form legend{
+				font-size: 2em;
+				text-transform: uppercase;
+				text-align: center;
+			}
+		</style>
+	
+</head>
+<body>
+	<form>
+		
+		<fieldset class="login-form">
+			<legend class="text-light">
+			<i class="fas fa-unlock-alt text-light fa-fw"></i>Login Form</legend>
+
+			<div class="form-input">
+				<label class="text-light" for="username"><i class="far fa-user text-light fa-fw"></i>User Name:</label>
+				<input type="text" name="" id="username" class="username" value="">
+			</div>
+			<div class="form-input">
+				<label class="text-light" for="pwd">
+				<i class="fas fa-key text-light fa-fw"></i>Password:</label>
+				<input type="Password" name="" id="pwd" value="">
+			</div>
+
+			<button class="btn" onclick="loginChange()">
+
+				<i class="fas fa-lock-open text-light fa-fw"></i>
+			Login
+		</button>
+		<a href="#" class="reg-link">Register Account</a>
+
+		</fieldset>
+    </form>
+
+    <script>
+     
+        function loginChange(){
+            let userName = document.getElementById("username").value;
+            let pass = document.getElementById("pwd").value;
+			let inputTag = document.querySelector("input");
+           
+			if(userName === "admin" && pass === "123"){
+				window.alert("Your username and password is correct");
+			 }else if(userName === "admin" && pass.length < 3 ){
+				window.alert("please enter the password at least 3");
+			 }else if (userName === "" && pass === "123"){
+				window.alert("please enter username");
+			 }else {
+				window.alert('type something');
+			 }
+			
+
+        // }//elseif
+		 // if(uname=="admin" && pass=="admin"){
+            //     window.alert("Your username and password are correct");
+            // }else if(uname==="admin" && pass!=="admin"){
+            //     window.alert("Your password is incorrect");
+            // }else if (uname!=="admin" && pass==="admin"){
+            //     window.alert("Your username is incorrect");
+        
+ 
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
